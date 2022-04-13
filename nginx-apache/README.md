@@ -42,7 +42,7 @@ IncludeOptional sites-enabled/*.conf
 nano /etc/httpd/sites-available/example.loc.conf
 ```
 
-Содержимое файла [/httpd/sites-available/example.loc.conf](/httpd/sites-available/example.loc.conf)
+Содержимое файла [/httpd/sites-available/example.loc.conf](httpd/sites-available/example.loc.conf)
 
 Активируем виртуальный хост, для этого создим символьную ссылку в директории sites-enabled
 

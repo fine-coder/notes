@@ -1,5 +1,5 @@
 # Заметки
 
-* [Разное](/misc/README.md)
-* [PHP](/php/README.md)
+* [PHP](/php/)
 * [Nginx proxy & Apache](/nginx-apache/README.md)
+* [Разное](/misc/README.md)
