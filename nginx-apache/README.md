@@ -183,8 +183,8 @@ CustomLog /var/www/example.loc/log/httpd-access.log combined
 ```
 
 combined добавит дополнительные поля
-* "http://www.example.com/start.html" ( \"%{Referer}i\") Заголовок HTTP-запроса Referer
-* "Mozilla/4.08 [en] (Win98; I ;Nav)" ( \"%{User-agent}i\") Заголовок HTTP-запроса User-Agent
+* `"http://www.example.com/start.html" ( \"%{Referer}i\")` Заголовок HTTP-запроса Referer
+* `"Mozilla/4.08 [en] (Win98; I ;Nav)" ( \"%{User-agent}i\")` Заголовок HTTP-запроса User-Agent
 
 ### https
 
