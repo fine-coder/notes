@@ -1,7 +1,6 @@
 # Nginx proxy & Apache
 
 
-
 ## Настройка виртуальных хостов
 
 Создаем директории
@@ -42,7 +41,7 @@ IncludeOptional sites-enabled/*.conf
 nano /etc/httpd/sites-available/example.loc.conf
 ```
 
-Содержимое файла [/httpd/sites-available/example.loc.conf](httpd/sites-available/example.loc.conf)
+Содержимое файла [httpd/sites-available/example.loc.conf](httpd/sites-available/example.loc.conf)
 
 Активируем виртуальный хост, для этого создим символьную ссылку в директории sites-enabled
 
@@ -85,7 +84,7 @@ server_names_hash_bucket_size 64;
 nano /etc/nginx/sites-available/example.loc.conf
 ```
 
-Содержимое файла [/nginx/sites-available/example.loc.conf](/nginx/sites-available/example.loc.conf)
+Содержимое файла [nginx/sites-available/example.loc.conf](nginx/sites-available/example.loc.conf)
 
 Активируем виртуальный хост, для этого создим символьную ссылку в директории sites-enabled
 
@@ -98,7 +97,6 @@ ln -s /etc/nginx/sites-available/example.loc.conf /etc/nginx/sites-enabled/examp
 ```
 systemctl restart nginx
 ```
-
 
 
 ## Nginx пользователь и права доступа
@@ -152,7 +150,6 @@ https://firstvds.ru/technology/linux-permissions
 https://ittricks.ru/administrirovanie/linux/896/nastrojka-prav-dostupa-dlya-veb-servera-apache-httpd
 
 
-
 ## Apache конфиг
 
 ### Options, AllowOverride, Require
@@ -198,7 +195,6 @@ combined добавит дополнительные поля
 ```
 
 
-
 ## Nginx конфиг
 
 ### https
@@ -228,7 +224,6 @@ $ - привязка к концу строки, `/index\.php/` будет со�
 .+ - один и более любых символов
 
 \. - так как точка специальный символ, то для того, чтобы обозначить точку, ее нужно экранировать
-
 
 
 ## SELinux
@@ -264,7 +259,6 @@ SELinux имеет три режима работы, по умолчанию у�
 
 Ссылки:  
 https://redos.red-soft.ru/base/arm/arm-other/disable-selinux/
-
 
 
 ## FirewallD
@@ -305,7 +299,6 @@ firewall-cmd --list-all --zone=home
 
 Подробнее  
 https://netpoint-dc.com/blog/centos-7-firewalld/
-
 
 
 ## SSL CentOS 7
@@ -356,7 +349,11 @@ systemctl restart nginx
 systemctl list-timers
 ```
 
-Протестировать автоматическое продление сертификатов
+Сертификат Let's Encrypt можно обновить, если его срок действия истекает менее, чем через 30 дней
+
+!Проверить автоматическое обновление!
+
+Протестировать автоматическое обновление сертификатов
 
 ```
 certbot renew --dry-run
@@ -377,7 +374,7 @@ nano /etc/nginx/sites-available/example.loc.conf
 certbot --nginx rollback
 ```
 
-После слова `rollback` возможно потребуется написать домены
+!`rollback` протестировать для конкретного домена!
 
 Ссылки:  
 https://eff-certbot.readthedocs.io/en/stable/using.html#nginx

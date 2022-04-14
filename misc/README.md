@@ -1,7 +1,5 @@
 # Разное
 
-[Установка Adminer в CentOS 7](#установка-adminer-в-centos-7)
-
 ## Установка Adminer в CentOS 7
 
 Лучше использовать Database & Terminal в PhpStorm, а не Adminer
@@ -45,7 +43,7 @@ systemctl restart httpd
 Открываем Adminer
 
 ```
-http://yourdomain.com/adminer
+http://example.loc/adminer
 ```
 
 Ссылки:  
